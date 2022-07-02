@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import * as dotenv from 'dotenv'
+dotenv.config()
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { CdkDemoStack } from '../lib/cdk-demo-stack';
@@ -15,7 +17,7 @@ new CdkDemoStack(app, 'CdkDemoStack', {
 
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
+  env: { account: process.env.ACCOUNT_ID, region: process.env.REGION },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
