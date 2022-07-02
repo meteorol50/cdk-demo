@@ -2,7 +2,7 @@
 import * as dotenv from 'dotenv'
 dotenv.config()
 import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
+import * as cdk from '@aws-cdk/core';
 import { CdkDemoStack } from '../lib/cdk-demo-stack';
 
 const app = new cdk.App();
